@@ -9,10 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Install AWS CLI
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y awscli
       - uses: actions/checkout@main
         with:
           args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
